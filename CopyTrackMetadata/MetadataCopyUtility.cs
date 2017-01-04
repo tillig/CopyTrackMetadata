@@ -1,10 +1,9 @@
 using System;
-
 using iTunesLib;
 
 namespace CopyTrackMetadata
 {
-	class MetadataCopyUtility
+	public class MetadataCopyUtility
 	{
 		/// <summary>
 		/// Copies the metadata attributes from one track to another.
@@ -193,7 +192,7 @@ namespace CopyTrackMetadata
 			{
 				destination.Year = source.Year;
 			}
-			
+
 			// Excluded:
 			// Copying the Album Rating in iTunes 7.4.1 causes the iTunes UI
 			// to freak out and stop displaying the individual song ratings

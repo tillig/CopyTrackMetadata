@@ -1,19 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-
 using iTunesLib;
 
 namespace CopyTrackMetadata
 {
-    public partial class Form1 : Form
+	public partial class Form1 : Form
 	{
-		#region Variables
-
 		/// <summary>
 		/// References the iTunes application object to perform operations on.
 		/// </summary>
@@ -29,8 +21,6 @@ namespace CopyTrackMetadata
 		/// </summary>
 		private CopyOptions options = new CopyOptions();
 
-		#endregion
-
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Form1"/> class.
 		/// </summary>
@@ -40,12 +30,12 @@ namespace CopyTrackMetadata
 		/// </para>
 		/// </remarks>
 		public Form1()
-        {
-            InitializeComponent();
+		{
+			InitializeComponent();
 			this._itunes = new iTunesLib.iTunesAppClass();
 			this.sourceTrackDisplay.ITunes = this._itunes;
 			this.destinationTrackDisplay.ITunes = this._itunes;
-        }
+		}
 
 		/// <summary>
 		/// Handles the "Clear Selections" button click event.

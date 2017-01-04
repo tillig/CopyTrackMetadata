@@ -1,11 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
-
 using iTunesLib;
 
 namespace CopyTrackMetadata
@@ -118,13 +112,13 @@ namespace CopyTrackMetadata
 
 		private void selectButton_Click(object sender, EventArgs e)
 		{
-			IITTrackCollection selected = this.ITunes.SelectedTracks;
+			IITTrackCollection selected = this.ITunes.BrowserWindow.SelectedTracks;
 			if (selected == null || selected.Count != 1)
 			{
 				System.Windows.Forms.MessageBox.Show("You must select one and only one track.", "Select One Track Only", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			
+
 			// IITTrackCollection indexes start at 1.
 			IITFileOrCDTrack selectedTrack = selected[1] as IITFileOrCDTrack;
 			if (selectedTrack == null)
